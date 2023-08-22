@@ -23,14 +23,14 @@ body {
 }
 
 .app {
-  background-image: url('./cold.jpg');
+  background-image: url('/public/images/cold.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease;
 }
 
 .app.warm {
-  background-image: url('./warm.jpg');
+  background-image: url('/public/images/warm.jpg');
 }
 
 main {
