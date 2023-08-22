@@ -2,6 +2,8 @@ import './App.css';
 import React, { useState } from 'react';
 
 export default function App() {
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
 
   const api = {
     key: "9adfc103f31154764e8d5d054a68b28f    ",
@@ -29,12 +31,13 @@ export default function App() {
             type="text"
             className="search-bar"
             placeholder="Search..."
-            
+            onChange={e => setQuery(e.target.value)}
+            value={query}
           />
         </div>
         <div>
           <div className="location-box">
-            <div className="location">New York City, US</div>
+            <div className="location">London,UK</div>
             <div className="date">{dateBuilder(new Date())}</div>
           </div>
           </div>
